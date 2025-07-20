@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-ios</TargetFramework>
+		<IosMinimumOSVersion>18.0</IosMinimumOSVersion>
+		<NETCoreSdkVersion>8.0.18</NETCoreSdkVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>true</ImplicitUsings>
+		<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+		<MtouchLink>SdkOnly</MtouchLink>
+		<NullabilityInfoContextSupport>true</NullabilityInfoContextSupport>
+		<Nullable>enable</Nullable>
+		<BundleIdentifier>com.vpnhood.app.client.ios.networkextension</BundleIdentifier>
+	</PropertyGroup>
+</Project>
