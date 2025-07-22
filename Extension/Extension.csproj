@@ -10,6 +10,11 @@
 		<MtouchLink>SdkOnly</MtouchLink>
 		<NullabilityInfoContextSupport>true</NullabilityInfoContextSupport>
 		<Nullable>enable</Nullable>
-		<BundleIdentifier>com.vpnhood.app.client.ios.networkextension</BundleIdentifier>
+		<BundleIdentifier>com.vpnhood.test.ios.networkextension</BundleIdentifier>
+		<RootNamespace>VpnHood.Core.VpnAdapters.IosTun</RootNamespace>
 	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="VpnHood.Core.Client.VpnServices.Host" Version="7.2.727" />
+	  <PackageReference Include="VpnHood.Core.VpnAdapters.Abstractions" Version="7.2.727" />
+	</ItemGroup>
 </Project>

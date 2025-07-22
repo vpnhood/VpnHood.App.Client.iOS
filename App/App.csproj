@@ -6,12 +6,16 @@
         <ImplicitUsings>true</ImplicitUsings>
         <UseMaui>false</UseMaui>
         <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <BundleIdentifier>com.vpnhood.app.client.ios</BundleIdentifier>
+        <BundleIdentifier>com.vpnhood.test.ios</BundleIdentifier>
         <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
         <IosMinimumOSVersion>18.0</IosMinimumOSVersion> <!-- or 18.0 -->
         <NETCoreSdkVersion>8.0.18</NETCoreSdkVersion>
-
-    </PropertyGroup>
+	    <RootNamespace>VpnHood.App.Client.Ios.Test</RootNamespace>
+	</PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="VpnHood.AppLib.App" Version="7.2.727" />
+      <PackageReference Include="VpnHood.Core.Client.Device" Version="7.2.727" />
+    </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Extension\Extension.csproj">
             <IsAppExtension>true</IsAppExtension>

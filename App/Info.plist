@@ -2,9 +2,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>LightVPN</string>
+	<string>VpnHood! Client Test</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.vpnhood.simpleNetwork</string>
+	<string>com.vpnhood.client.ios.test.</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
