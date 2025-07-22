@@ -16,11 +16,6 @@
       <PackageReference Include="VpnHood.AppLib.App" Version="7.2.727" />
       <PackageReference Include="VpnHood.Core.Client.Device" Version="7.2.727" />
     </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Extension\Extension.csproj">
-            <IsAppExtension>true</IsAppExtension>
-        </ProjectReference>
-    </ItemGroup>
 
 
 </Project>

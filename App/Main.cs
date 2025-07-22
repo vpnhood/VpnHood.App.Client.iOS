@@ -1,4 +1,4 @@
-using App;
+using VpnHood.App.Client.Ios.Test;
 
 // This is the main entry point of the application.
 // If you want to use a different Application Delegate class from "AppDelegate"

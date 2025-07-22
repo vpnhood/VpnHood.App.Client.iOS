@@ -13,7 +13,6 @@ public class IosVpnAdapter(NEPacketTunnelProvider tunnelProvider, IosVpnAdapterS
     : TunVpnAdapter(settings)
 {
     private NEPacketTunnelFlow? _packetFlow;
-
     private readonly List<NEIPv4Route> _ipv4Routes = [];
     private readonly List<NEIPv6Route> _ipv6Routes = [];
     private readonly List<IPAddress> _dnsServers = [];

@@ -1,10 +1,10 @@
-using VpnHood.App.Client.Ios.Test;
 using VpnHood.AppLib;
 using VpnHood.AppLib.Abstractions;
 using VpnHood.AppLib.Services.Ads;
+using VpnHood.AppLib.Utils;
 using VpnHood.Core.Client.Abstractions;
 
-namespace App;
+namespace VpnHood.App.Client.Ios.Test;
 
 [Register("AppDelegate")]
 public class AppDelegate : UIApplicationDelegate
@@ -13,7 +13,10 @@ public class AppDelegate : UIApplicationDelegate
     {
         // initialize VpnHoodApp
         if (!VpnHoodApp.IsInit)
+        {
             VpnHoodApp.Init(new IosDevice(), BuildAppOptions());
+            VpnHoodApp.Instance.Settings.UserSettings.DebugData1 = DebugCommands.UseTcpOverTun;
+        }
 
         // create the temporary minimal window
         var window = new UIWindow(UIScreen.MainScreen.Bounds);
