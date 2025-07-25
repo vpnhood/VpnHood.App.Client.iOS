@@ -58,6 +58,7 @@ public class AppDelegate : UIApplicationDelegate
             Resources = resources,
             UiName = "VpnHoodTest",
             IsAddAccessKeySupported = false,
+            UseInternalLocationService = false,
             AdOptions = new AppAdOptions
             {
                 PreloadAd = false

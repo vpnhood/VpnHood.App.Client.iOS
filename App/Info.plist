@@ -4,7 +4,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>VpnHood! Client Test</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.vpnhood.client.ios.test.</string>
+	<string>com.vpnhood.client.ios.test</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
