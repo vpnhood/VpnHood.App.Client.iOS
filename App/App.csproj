@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0-ios</TargetFramework>
+        <TargetFramework>net9.0-ios</TargetFramework>
         <OutputType>Exe</OutputType>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
@@ -9,12 +9,11 @@
         <BundleIdentifier>com.vpnhood.test.ios</BundleIdentifier>
         <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
         <IosMinimumOSVersion>18.0</IosMinimumOSVersion> <!-- or 18.0 -->
-        <NETCoreSdkVersion>8.0.18</NETCoreSdkVersion>
 	    <RootNamespace>VpnHood.App.Client.Ios.Test</RootNamespace>
 	</PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="VpnHood.AppLib.App" Version="7.2.727" />
-      <PackageReference Include="VpnHood.Core.Client.Device" Version="7.2.727" />
+      <PackageReference Include="VpnHood.AppLib.App" Version="7.3.766" />
+      <PackageReference Include="VpnHood.Core.Client.Device" Version="7.3.766" />
     </ItemGroup>
     <PropertyGroup>
         <NullabilityInfoContextSupport>true</NullabilityInfoContextSupport>

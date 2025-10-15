@@ -1,7 +1,6 @@
 using VpnHood.AppLib;
 using VpnHood.AppLib.Abstractions;
 using VpnHood.AppLib.Services.Ads;
-using VpnHood.AppLib.Utils;
 using VpnHood.Core.Client.Abstractions;
 
 namespace VpnHood.App.Client.Ios.Test;
@@ -9,17 +8,14 @@ namespace VpnHood.App.Client.Ios.Test;
 [Register("AppDelegate")]
 public class AppDelegate : UIApplicationDelegate
 {
-    public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    public override bool FinishedLaunching(UIApplication application, NSDictionary? launchOptions)
     {
         // initialize VpnHoodApp
         if (!VpnHoodApp.IsInit)
-        {
             VpnHoodApp.Init(new IosDevice(), BuildAppOptions());
-            VpnHoodApp.Instance.Settings.UserSettings.DebugData1 = DebugCommands.UseTcpOverTun;
-        }
 
-        // create the temporary minimal window
-        var window = new UIWindow(UIScreen.MainScreen.Bounds);
+        // create the temporary minimal window (use UIWindowScene on iOS 26+ to avoid CA1422)
+        var window = CreateWindow();
         var rootView = new UIView
         {
             BackgroundColor = UIColor.SystemBackground
@@ -38,6 +34,24 @@ public class AppDelegate : UIApplicationDelegate
         window.RootViewController = new UIViewController { View = rootView };
         window.MakeKeyAndVisible();
         return true;
+    }
+
+    private UIWindow CreateWindow()
+    {
+        if (OperatingSystem.IsIOSVersionAtLeast(26))
+        {
+            var windowScene =
+                UIApplication.SharedApplication.ConnectedScenes
+                    .OfType<UIWindowScene>()
+                    .FirstOrDefault(s =>
+                        s.ActivationState is UISceneActivationState.ForegroundActive or UISceneActivationState.ForegroundInactive)
+                ?? UIApplication.SharedApplication.ConnectedScenes.OfType<UIWindowScene>().FirstOrDefault()
+                ?? throw new PlatformNotSupportedException("No UIWindowScene available to create a UIWindow.");
+
+            return new UIWindow(windowScene);
+        }
+
+        return new UIWindow(UIScreen.MainScreen.Bounds);
     }
 
     private static AppOptions BuildAppOptions()

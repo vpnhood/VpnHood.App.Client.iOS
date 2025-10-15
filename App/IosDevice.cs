@@ -16,6 +16,7 @@ public class IosDevice : IDevice
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "vpn-service");
 
     public bool IsBindProcessToVpnSupported => false;
+    public bool IsTcpProxySupported => false;
     public bool IsExcludeAppsSupported => false;
     public bool IsIncludeAppsSupported => false;
     public bool IsAlwaysOnSupported => false;
